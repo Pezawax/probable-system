@@ -1,1 +1,1 @@
-//asdasd
+console.log("Js file")
