@@ -1,1 +1,1 @@
-print("whoami")
+print("test")
