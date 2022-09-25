@@ -34,3 +34,5 @@ jobs:
         run: |
           echo Hello to
           echo first ci.
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v2
