@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/Pezawax/probable-system/issues"
   },
-  "homepage": "https://github.com/Pezawax/probable-system#readme"
+  "homepage": "https://github.com/Pezawax/probable-system#readme",
+  "devDependencies": {
+    "jest": "^29.0.3"
+  }
 }
