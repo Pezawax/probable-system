@@ -18,7 +18,7 @@ ul {
 /* Style the list items */
 ul li {
   margin-bottom: 1ch;
-  border-radius: 15ch;
+  border-radius: 15px;
   cursor: pointer;
   position: relative;
   padding: 12px 8px 12px 40px;
@@ -32,11 +32,6 @@ ul li {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-/* Set all odd list items to a different color (zebra-stripes) */
-ul li:nth-child(odd) {
-  background: #f9f9f9;
 }
 
 /* Darker background-color on hover */
@@ -71,6 +66,8 @@ ul li.checked::before {
   right: 0;
   top: 0;
   padding: 12px 16px 12px 16px;
+  border-radius: 15px;
+
 }
 
 .close:hover {
@@ -80,9 +77,9 @@ ul li.checked::before {
 
 /* Style the header */
 .header {
-  border-radius: 15ch;
+  border-radius: 15px;
   background-color: #414141;
-  padding: 30px 40px;
+  padding: 12px 8px 12px 40px;
   color: white;
   text-align: center;
 }
@@ -96,29 +93,20 @@ ul li.checked::before {
 
 /* Style the input */
 input {
-  border-radius: 15ch;
+  background-color: #414141;
+  color: #fff;
+  border-radius: 15px;
   margin: 0;
   border: none;
-  width: 90%;
-  padding: 5px;
-  float: right;
+  width: 93%;
+  padding: 7px 5px 7px 20px;
+  float: center;
   font-size: 14px;
-  text-align: center;
+  text-align: left;
 }
 
-/* Style the "Add" button */
-.addBtn {
-  border-radius: 15ch;
-  width: 7%;
-  background: #414141;
-  color: #fff;
+/* Style the "Add" icon */
+#addIcon {
   float: left;
-  text-align: center;
-  font-size: 20px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.addBtn:hover {
-  background-color: #bbb;
+  font-size: 30px;
 }
