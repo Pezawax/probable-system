@@ -19,7 +19,7 @@
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col">
-        <div class="card" id="list1">
+        <div class="card" id="card1">
           <div class="card-body py-4 px-4 px-md-5">
             <!-- header -->
             <p class="h1 text-center mt-3 mb-4 pb-3">
@@ -29,20 +29,19 @@
             <!-- input -->
             <div class="pb-2">
               <div class="card">
-                <div class="card-body" id="card-input">
+                <div class="card-body" id="cardAdd">
                   <div class="d-flex flex-row align-items-center">
-                    <a href="#!" data-mdb-toggle="tooltip" title="Add" onclick="newElement()"><i
-                        class="fa-solid fa-plus icon" style="color:#fff"></i></a>
-                    <input type="text" class="form-control form-control-lg ml-3" id="myInput" placeholder="Add a task">
+                    <a onclick="addNewTask()" style="padding: 8px;">
+                      <i class="fa-solid fa-plus icon" style="color:#fff"></i>
+                    </a>
+                    <input type="text" class="form-control" id="myInput" placeholder="Add a task">
                   </div>
                 </div>
               </div>
             </div>
 
-            <hr class="my-3">
-
             <!-- task list -->
-            <ul id="myUL" class="w-auto my-3">
+            <ul id="myUL" class="w-auto my-1">
               <li>Take kids from school.</li>
               <li class="checked">Don't forget to watch the new episode of Rings of Power.</li>
               <li class="checked">Pay house tax. It has until the 15th day of the month.</li>

@@ -21,11 +21,14 @@ ul li {
   border-radius: 15px;
   cursor: pointer;
   position: relative;
-  padding: 12px 8px 12px 50px;
+  padding-top: 14px;
+  padding-right: 50px;
+  padding-bottom: 14px;
+  padding-left: 50px;
   list-style-type: none;
-  background: #eee;
-  font-size: 18px;
-  transition: 0.2s;
+  background: #ffffff;
+  font-size: 15px;
+  transition: 0.5s;
 
   /* make the list items unselectable */
   -webkit-user-select: none;
@@ -38,13 +41,12 @@ ul li {
 ul li::after {
   font-family: 'Font Awesome 5 Free';
   content: '\f111';
-  position: absolute;
-  border-width: 0 2px 2px 0;
+  position: absolute;  
   top: 10px;
   left: 16px;
   height: 15px;
   width: 7px;
-  font-size: larger;
+  font-size:x-large;
 }
 
 /* Darker background-color on hover */
@@ -54,12 +56,12 @@ ul li:hover {
 
 /* When clicked on, add a background color and strike out text */
 ul li.checked {
-  /* background: #888; */
-  /* color: #fff; */
+  color:#00000080; 
   text-decoration: line-through;
+  /* transition: 1.0s; */
 }
 
-/* Add a "checked" mark when clicked on */
+/* Add a "checked circle" mark when clicked on */
 ul li.checked::before {
   font-family: 'Font Awesome 5 Free';
   content: '\f058';
@@ -69,58 +71,60 @@ ul li.checked::before {
   left: 16px;
   height: 15px;
   width: 7px;
-  font-size: larger;
+  font-size: x-large;
 }
 
 /* Style the close button */
 .close {
   position: absolute;
-  right: 0;
-  top: 0;
-  padding: 12px 16px 12px 16px;
-  border-radius: 15px;
-
+  right: 15px;
+  top: 12px;  
 }
 .close::before {
   font-family: 'Font Awesome 5 Free';
   content: '\f2ed';
+  font-size: 18px;
 }
 
 .icon {
   font-size: larger;
 }
-
-#card-input {
-  background-color:#414141; 
-  border-radius: 15px; 
-  padding: 5px 20px 5px 20px;
+.icon:hover {
+  transform: scale(1.5);
 }
 
-#list1 {
+#cardAdd {
+  background:#414141;
+  border-radius:15px; 
+  padding-right: 50px;  
+  padding-left:12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+
+}
+
+#card1 {
   border-radius: 15px; 
   background-color: #eff1f2
 }
 
-#list1 .form-control {
+#card1 .form-control {
   border-color: transparent;
-  background-color:#414141;
+  background:#414141;
   color: #fff;
-
-  float: right;
+  padding: 6px;
+  font-size: 15px;
 }
 
-#list1 .form-control:focus {
+#card1 .form-control:focus {
   border-color: transparent;
   box-shadow: none;
-}
-
-#list1 .select-input.form-control[readonly]:not([disabled]) {
-  background-color: #fbfbfb;
 }
 
 .card {
   background-color: #eff1f2; 
   border:none;
+  
 }
 
 
