@@ -2,12 +2,19 @@
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
-    var span = document.createElement("SPAN");
-    var txt = document.createTextNode("\u00D7");
+    var span = document.createElement("SPAN");    
     span.className = "close";
-    span.appendChild(txt);
     myNodelist[i].appendChild(span);
 }
+
+// Trigger a button click on keyboard "enter"
+var input = document.getElementById("myInput");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    addNewTask();
+  }
+});
 
 // Click on a close button to hide the current list item
 var close = document.getElementsByClassName("close");
@@ -28,7 +35,7 @@ list.addEventListener('click', function (ev) {
 }, false);
 
 // Create a new list item when clicking on the "Add" button
-function newElement() {
+function addNewTask() {
     var li = document.createElement("li");
     var inputValue = document.getElementById("myInput").value;
     var t = document.createTextNode(inputValue);
@@ -41,9 +48,7 @@ function newElement() {
     document.getElementById("myInput").value = "";
 
     var span = document.createElement("SPAN");
-    var txt = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(txt);
+    span.className = "close";   
     li.appendChild(span);
 
     for (i = 0; i < close.length; i++) {

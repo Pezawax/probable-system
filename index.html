@@ -10,30 +10,53 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
   <link rel="stylesheet" href="./CSS/style.css" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <title>Pezawax</title>
 </head>
 
 <body>
-  <!-- Content -->
-  <div class="container mt-5">
-    <!-- input header -->
-    <div id="myDIV" class="header">
-      <span onclick="newElement()" class="addBtn">+</span>
-      <input type="text" id="myInput" placeholder="Write a task">
+  
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">
+        <div class="card" id="card1">
+          <div class="card-body py-4 px-4 px-md-5">
+            <!-- header -->
+            <p class="h1 text-center mt-3 mb-4 pb-3">
+              <i class="fas fa-check-square me-1"></i>
+              <u>To Do List</u>
+            </p>
+            <!-- input -->
+            <div class="pb-2">
+              <div class="card">
+                <div class="card-body" id="cardAdd">
+                  <div class="d-flex flex-row align-items-center">
+                    <a onclick="addNewTask()" style="padding: 8px;">
+                      <i class="fa-solid fa-plus icon" style="color:#fff"></i>
+                    </a>
+                    <input type="text" class="form-control" id="myInput" placeholder="Add a task">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- task list -->
+            <ul id="myUL" class="w-auto my-1">
+              <li>Take kids from school.</li>
+              <li class="checked">Don't forget to watch the new episode of Rings of Power.</li>
+              <li class="checked">Pay house tax. It has until the 15th day of the month.</li>
+              <li >Make preparations for the meeting to be held at 4 o'clock for the company to recruit workers.</li>
+              <li>Buy 1kg of apples and 500g of carrots from the market.</li>
+              <li>All the burdens pf the world will be placed on them</li>
+              <li class="checked">Set notifications close time interval in slack</li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
     </div>
-
-    <!-- task list -->
-    <ul id="myUL" class="w-auto my-3">
-      <li>Hit the gym</li>
-      <li class="checked">Pay bills</li>
-      <li>Meet George</li>
-      <li>Buy eggs</li>
-      <li>Read a book</li>
-      <li>Organize office</li>
-    </ul>
   </div>
-
+ 
   <!-- Bootstrap JS -->
   <script src="./JS/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
