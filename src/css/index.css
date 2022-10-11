@@ -1,130 +1,143 @@
-body {
-  background-color: #d9d9d9;
-  margin: 0;
-  min-width: 250px;
-}
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap");
 
-/* Include the padding and border in an element's total width and height */
 * {
-  box-sizing: border-box;
-}
-
-/* Remove margins and padding from the list */
-ul {
   margin: 0;
   padding: 0;
+
 }
 
-/* Style the list items */
-ul li {
-  margin-bottom: 1ch;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  background-color: #fff;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.app {
+  width: 60%;
+  background-color: #D9D9D9;
+  padding:25px;
+  border-radius: 25px;
+}
+
+@media (max-width:768px) {
+  .app {
+    width: 90%;
+
+  }
+}
+
+.app h1 {
+  color: #000000;
+  font-size: 40px;
+  padding: 0 0 15px ;
+  text-align: center;
+  border-radius: .5rem .5rem 0 0;
+  background: #D9D9D9;
+  font-family: "Rajdhani", sans-serif;
+}
+
+.app form {  
+  display: flex;
+  width: 100%;
+  background: #000000;
+  opacity: 0.7;
   border-radius: 15px;
-  cursor: pointer;
-  position: relative;
-  padding-top: 14px;
-  padding-right: 50px;
-  padding-bottom: 14px;
-  padding-left: 50px;
-  list-style-type: none;
-  background: #ffffff;
+}
+.app form input {  
+  background:transparent;
+  border-radius: 15px;
+  opacity: 0.7;
   font-size: 15px;
-  transition: 0.5s;
-
-  /* make the list items unselectable */
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  color: white;
+  padding: 10px;
+  width: 70%;
+  outline: none;
+  border: none;
 }
-
-/* add empty circle */
-ul li::after {
-  font-family: 'Font Awesome 5 Free';
-  content: '\f111';
-  position: absolute;  
-  top: 10px;
-  left: 16px;
-  height: 15px;
-  width: 7px;
-  font-size:x-large;
-}
-
-/* Darker background-color on hover */
-ul li:hover {
-  background: #ddd;
-}
-
-/* When clicked on, add a background color and strike out text */
-ul li.checked {
-  color:#00000080; 
-  text-decoration: line-through;
-  /* transition: 1.0s; */
-}
-
-/* Add a "checked circle" mark when clicked on */
-ul li.checked::before {
-  font-family: 'Font Awesome 5 Free';
-  content: '\f058';
-  position: absolute;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  height: 15px;
-  width: 7px;
-  font-size: x-large;
-}
-
-/* Style the close button */
-.close {
-  position: absolute;
-  right: 15px;
-  top: 12px;  
-}
-.close::before {
-  font-family: 'Font Awesome 5 Free';
-  content: '\f2ed';
-  font-size: 18px;
-}
-
-.icon {
-  font-size: larger;
-}
-.icon:hover {
-  transform: scale(1.5);
-}
-
-#cardAdd {
-  background:#414141;
-  border-radius:15px; 
-  padding-right: 50px;  
-  padding-left:12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-
-}
-
-#card1 {
-  border-radius: 15px; 
-  background-color: #eff1f2
-}
-
-#card1 .form-control {
-  border-color: transparent;
-  background:#414141;
-  color: #fff;
-  padding: 6px;
-  font-size: 15px;
-}
-
-#card1 .form-control:focus {
-  border-color: transparent;
-  box-shadow: none;
-}
-
-.card {
-  background-color: #eff1f2; 
-  border:none;
+.app form button {  
+  color: white;
+  background:transparent;
+  opacity: 0.7;
+  border-radius: 15px;
+  font-size: 28px;
+  padding: 6.75px 16.5px;
+  outline: none;
+  border: none;
   
 }
+.app form button:hover {
+  transform: scale(1.5);
+  cursor: pointer; 
+}
 
+.app ul {
+  list-style: none;
+  color: #e0e0e0;
+  padding: 0;
+  margin-top: 8px;
+  transition: 0.5s;
+
+}
+.app ul li {
+  padding: 7px 7px;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  margin-top: 8px;
+}
+
+.check {
+  width: 1.8em;
+  height: 1.8em;
+  margin-left: 7px;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #000000;
+  -webkit-appearance: none;
+}
+
+.check:checked::before {
+  content: "\f00c";
+  font-family: FontAwesome;
+  color: #000;
+  font-size: 16px; 
+  padding-left: 2px;
+  padding-top: 2px;  
+  position: absolute;
+}
+
+.task {
+  font-size: 18px;
+  padding: 0 3px;
+  margin-left: 12px;
+  width: fit-content;
+  background: transparent;
+  border: none;
+  color: #000000;
+  background-color: #FFFFFF;
+}
+.task:focus {
+  outline: none;
+}
+.completed {
+  color: rgba(192, 192, 192, 0.8);
+  text-decoration: line-through;
+}
+
+/* trash icon */
+.app ul li i {
+  float: right;
+  cursor: pointer;  
+  margin-top: 8px;
+  margin-right: 7px ;
+  font-size: 17px;
+}
+.app ul li i:hover {
+  color: #000000;
+}
 
