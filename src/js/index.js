@@ -1,6 +1,35 @@
 let itemsArray = localStorage.getItem("todoList")
   ? JSON.parse(localStorage.getItem("todoList"))
-  : [];
+  : [
+      {
+        text: "Take kids from school.",
+        class: "",
+      },
+      {
+        text: "Don't forget to watch the new episode of Rings of Power.",
+        class: "checked",
+      },
+      {
+        text: "Pay house tax. It has until the 15th day of the month.",
+        class: "checked",
+      },
+      {
+        text: "Make preparations for the meeting to be held at 4 o'clock for the company to recruit workers.",
+        class: "",
+      },
+      {
+        text: "Buy 1kg of apples and 500g of carrots from the market.",
+        class: "",
+      },
+      {
+        text: "All the burdens pf the world will be placed on them",
+        class: "",
+      },
+      {
+        text: "Set notifications close time interval in slack",
+        class: "checked",
+      },
+    ];
 localStorage.setItem("todoList", JSON.stringify(itemsArray));
 const data = JSON.parse(localStorage.getItem("todoList"));
 
@@ -58,7 +87,7 @@ inputDom.addEventListener("keypress", function (event) {
 ulDom.addEventListener(
   "click",
   function (ev) {
-    if (ev.target.tagName === "LI") {      
+    if (ev.target.tagName === "LI") {
       let textContent = ev.target.textContent;
       if (ev.target.className === "") {
         ev.target.classList.toggle("checked");
