@@ -127,4 +127,17 @@ ul li.checked::before {
   
 }
 
+form button {
+  color: #fff;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer; 
+  margin-left: 2px;
+}
+
+form button:focus {
+  border: none;
+    outline: none;
+}
 
